@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Blog Personal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    /* Flecha hacia arriba */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0077cc;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+    }
+
+    .scroll-top:hover {
+      background-color: #005fa3;
+    }
+
+    .scroll-top.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenidos a Mi Blog</h1>
+    <p>Un espacio para compartir ideas y experiencias</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#acerca-de">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Entrada 1 -->
+    <div class="post">
+      <h2><a href="entradas/entrada1.html">Mi primera entrada</a></h2>
+      <p class="fecha">Publicado el 8 de mayo de 2025</p>
+      <p>Hoy empiezo este blog como un proyecto personal. Aquí compartiré mis aprendizajes en desarrollo web y otras cosas que me apasionan.</p>
+      <img src="img/imagen1.jpg" alt="Primera entrada" />
+    </div>
+
+    <!-- Entrada 2 -->
+    <div class="post">
+      <h2><a href="entradas/entrada2.html">Aprendiendo HTML</a></h2>
+      <p class="fecha">Publicado el 6 de mayo de 2025</p>
+      <p>HTML es el lenguaje base para crear páginas web. Es muy fácil de aprender y muy útil si quieres empezar en el mundo del desarrollo.</p>
+      <img src="img/imagen2.jpg" alt="HTML en acción" />
+    </div>
+
+    <!-- Entrada 3 -->
+    <div class="post">
+      <h2><a href="entradas/entrada3.html">Una imagen vale más que mil palabras</a></h2>
+      <p class="fecha">Publicado el 3 de mayo de 2025</p>
+      <p>Las imágenes ayudan a que tu contenido sea más atractivo. Asegúrate de usar imágenes optimizadas y con buen contexto.</p>
+      <img src="img/imagen3.jpg" alt="Imágenes en web" />
+    </div>
+
+  </div>
+
+  <!-- Sección Acerca de -->
+  <div id="acerca-de" class="section">
+    <h2>Acerca de</h2>
+    <p>Este blog ha sido creado como un espacio para compartir conocimientos sobre desarrollo web, aprender nuevas tecnologías y mejorar habilidades en programación. Mi objetivo es ayudar a quienes se inician en el mundo del desarrollo digital, así como ofrecer recursos y consejos prácticos.</p>
+  </div>
+
+  <!-- Sección Contacto -->
+  <div id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Si deseas ponerte en contacto conmigo, puedes escribirme al siguiente correo electrónico:</p>
+    <p><strong>Hugo Herrera Monar</strong></p>
+    <p><strong>Correo electrónico:</strong> <a href="mailto:hugoherreramonar@outlook.com">hugoherreramonar@outlook.com</a></p>
+  </div>
+
+  <!-- Espacio adicional para probar scroll -->
+  <div style="height: 10px;"></div>
+
+  <footer>
+    <p>&copy; 2025 Mi Blog Personal. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flecha hacia arriba -->
+  <div id="scroll-to-top" class="scroll-top">↑</div>
+
+  <!-- Script para mostrar/ocultar la flecha -->
+  <script>
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

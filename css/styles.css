@@ -1,0 +1,141 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #005fa3;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.post {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.post h2 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.post .fecha {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+  height: auto;
+}
+
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.section {
+  padding: 20px;
+  margin: 30px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#acerca-de h2, #contacto h2 {
+  color: #0077cc;
+}
+
+#acerca-de p, #contacto p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Botón de desplazamiento hacia arriba */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.scroll-top:hover {
+  background-color: #005fa3;
+}
+
+.scroll-top.show {
+  display: block;
+}
+
+/* 🌐 Responsive */
+@media (max-width: 600px) {
+  header, nav, .container, footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Ajustes para botón en pantallas pequeñas */
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+}
