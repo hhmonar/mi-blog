@@ -49,26 +49,26 @@
 
     <!-- Entrada 1 -->
     <div class="post">
-      <h2><a href="entradas/entrada1.html">Mi primera entrada</a></h2>
+      <h2><a href="entradas/entrada1.html" title="Leer la entrada completa">Mi primera entrada</a></h2>
       <p class="fecha">Publicado el 8 de mayo de 2025</p>
       <p>Hoy empiezo este blog como un proyecto personal. Aquí compartiré mis aprendizajes en desarrollo web y otras cosas que me apasionan.</p>
-      <img src="img/imagen1.jpg" alt="Primera entrada" />
+      <img src="img/imagen1.jpg" alt="Pantalla del blog al inicio del proyecto" />
     </div>
 
     <!-- Entrada 2 -->
     <div class="post">
-      <h2><a href="entradas/entrada2.html">Aprendiendo HTML</a></h2>
+      <h2><a href="entradas/entrada2.html" title="Leer la entrada completa">Aprendiendo HTML</a></h2>
       <p class="fecha">Publicado el 6 de mayo de 2025</p>
       <p>HTML es el lenguaje base para crear páginas web. Es muy fácil de aprender y muy útil si quieres empezar en el mundo del desarrollo.</p>
-      <img src="img/imagen2.jpg" alt="HTML en acción" />
+      <img src="img/imagen2.jpg" alt="Ejemplo de estructura HTML en una página web" />
     </div>
 
     <!-- Entrada 3 -->
     <div class="post">
-      <h2><a href="entradas/entrada3.html">Una imagen vale más que mil palabras</a></h2>
+      <h2><a href="entradas/entrada3.html" title="Leer la entrada completa">Una imagen vale más que mil palabras</a></h2>
       <p class="fecha">Publicado el 3 de mayo de 2025</p>
       <p>Las imágenes ayudan a que tu contenido sea más atractivo. Asegúrate de usar imágenes optimizadas y con buen contexto.</p>
-      <img src="img/imagen3.jpg" alt="Imágenes en web" />
+      <img src="img/imagen3.jpg" alt="Ejemplo del uso de imágenes para mejorar contenido" />
     </div>
 
   </div>
@@ -76,15 +76,21 @@
   <!-- Sección Acerca de -->
   <div id="acerca-de" class="section">
     <h2>Acerca de</h2>
-    <p>Este blog ha sido creado como un espacio para compartir conocimientos sobre desarrollo web, aprender nuevas tecnologías y mejorar habilidades en programación. Mi objetivo es ayudar a quienes se inician en el mundo del desarrollo digital, así como ofrecer recursos y consejos prácticos.</p>
+    <p>Soy Hugo Herrera, desarrollador web en formación con interés en diseño accesible, frontend moderno y automatización. Este blog ha sido creado como un espacio para compartir conocimientos sobre desarrollo web, aprender nuevas tecnologías y mejorar habilidades en programación. Mi objetivo es ayudar a quienes se inician en el mundo del desarrollo digital, así como ofrecer recursos y consejos prácticos.</p>
   </div>
 
   <!-- Sección Contacto -->
   <div id="contacto" class="section">
     <h2>Contacto</h2>
-    <p>Si deseas ponerte en contacto conmigo, puedes escribirme al siguiente correo electrónico:</p>
-    <p><strong>Hugo Herrera Monar</strong></p>
-    <p><strong>Correo electrónico:</strong> <a href="mailto:hugoherreramonar@outlook.com">hugoherreramonar@outlook.com</a></p>
+    <p class="contacto-negro">Si deseas ponerte en contacto conmigo, puedes escribirme al siguiente correo electrónico:</p>
+    <p class="contacto-negro"><strong>Hugo Herrera Monar</strong></p>
+    <p class="contacto-negro"><strong>Correo electrónico:</strong> <a href="mailto:hugoherreramonar@outlook.com">hugoherreramonar@outlook.com</a></p>
+<form action="mailto:hugoherreramonar@outlook.com" method="post" enctype="text/plain">
+  <label>Nombre:<br><input type="text" name="nombre" required></label><br>
+  <label>Mensaje:<br><textarea name="mensaje" required></textarea></label><br>
+  <input type="submit" value="Enviar">
+</form>
+
   </div>
 
   <!-- Espacio adicional para probar scroll -->

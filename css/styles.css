@@ -1,141 +1,165 @@
+/* Paleta de colores */
+:root {
+  --verde-oscuro: #2c6b2f;
+  --verde-medio: #4b9a2d;
+  --verde-claro: #6dbd45;
+  --verde-muy-claro: #e1f2d1;
+  --texto-oscuro: #333333;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--verde-muy-claro);
+  color: var(--texto-oscuro);
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  font-size: 16px; /* Tamaño de fuente más pequeño */
 }
 
+/* Encabezado */
 header {
-  background-color: #0077cc;
+  background-color: var(--verde-oscuro);
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 20px 15px; /* Reducción en el padding */
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2em; /* Tamaño de fuente más pequeño */
+}
+
+header p {
+  font-size: 1em; /* Tamaño de fuente más pequeño */
+}
+
+/* Navegación */
 nav {
-  background-color: #005fa3;
-  padding: 10px;
+  background-color: var(--verde-medio);
   text-align: center;
-  flex-wrap: wrap;
+  padding: 10px 15px; /* Ajuste en padding */
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  margin: 0 15px; /* Reducción de margen */
   font-weight: bold;
-  display: inline-block;
-  padding: 5px;
+  font-size: 1em; /* Ajuste en el tamaño de la fuente */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--verde-claro);
 }
 
-.container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px;
+/* Secciones */
+.section {
+  padding: 20px 15px; /* Reducción en el padding */
+  margin: 15px 0; /* Reducción de márgenes */
+  background-color: var(--verde-claro);
+  border-radius: 8px;
 }
 
+.section h2 {
+  color: var(--verde-oscuro);
+  font-size: 1.5em; /* Ajuste del tamaño del título */
+}
+
+/* Entradas */
 .post {
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0; /* Reducción de márgenes */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post h2 {
-  margin-top: 0;
-  color: #0077cc;
+  color: var(--verde-oscuro);
+  margin-bottom: 10px;
+  font-size: 1.6em; /* Ajuste en tamaño de fuente */
 }
 
-.post .fecha {
-  font-size: 0.9em;
-  color: #777;
-  margin-bottom: 10px;
+.post a {
+  color: var(--verde-oscuro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post a:hover {
+  color: var(--verde-claro);
 }
 
 .post img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 15px;
+  width: 100%;
   height: auto;
-}
-
-footer {
-  background-color: #0077cc;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
-
-.section {
-  padding: 20px;
-  margin: 30px 0;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#acerca-de h2, #contacto h2 {
-  color: #0077cc;
-}
-
-#acerca-de p, #contacto p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  border-radius: 8px;
+  margin-top: 15px; /* Ajuste en el margen */
 }
 
 /* Botón de desplazamiento hacia arriba */
 .scroll-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #0077cc;
+  bottom: 25px; /* Ajuste en la posición */
+  right: 25px; /* Ajuste en la posición */
+  background-color: var(--verde-medio);
   color: white;
-  font-size: 24px;
-  padding: 10px 15px;
+  font-size: 20px; /* Reducción en tamaño */
+  padding: 8px 12px; /* Ajuste en el padding */
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 1000;
-  transition: background-color 0.3s;
 }
 
 .scroll-top:hover {
-  background-color: #005fa3;
+  background-color: var(--verde-oscuro);
 }
 
-.scroll-top.show {
-  display: block;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--verde-oscuro);
+  color: white;
+  font-size: 0.9em; /* Ajuste en el tamaño de la fuente */
 }
 
-/* 🌐 Responsive */
-@media (max-width: 600px) {
-  header, nav, .container, footer {
-    padding-left: 10px;
-    padding-right: 10px;
+/* Sección de contacto */
+#contacto p {
+  color: var(--verde-oscuro);
+  font-size: 1em; /* Ajuste en tamaño de fuente */
+}
+
+/* Ajuste de tamaño para las imágenes en las entradas */
+.post img {
+  max-width: 100%;  /* Las imágenes no excederán el ancho de su contenedor */
+  height: auto;     /* Mantendrá la proporción de la imagen */
+  border-radius: 8px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
   }
 
-  .post {
-    padding: 15px;
+  header h1 {
+    font-size: 1.5em;
   }
 
   nav a {
     display: block;
-    margin: 5px 0;
+    margin: 10px 0;
   }
 
-  /* Ajustes para botón en pantallas pequeñas */
-  .scroll-top {
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px;
-    padding: 8px 12px;
+  .post img {
+    margin-top: 10px;
   }
+}
+
+
+/* Texto negro para sección de contacto */
+.contacto-negro {
+  color: black;
 }
