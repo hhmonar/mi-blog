@@ -139,3 +139,27 @@ footer {
   border-radius: 8px;
   margin-top: 15px;
 }
+
+/* Menú de navegación fijo (sticky) */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--verde-medio);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 15px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.navbar a:hover {
+  color: var(--verde-claro);
+}
