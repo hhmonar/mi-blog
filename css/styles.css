@@ -91,14 +91,11 @@ nav a:hover {
 }
 
 .post img {
-  max-width: 800px;     /* Tamaño máximo visible */
-  width: 100%;          /* Escalable según contenedor */
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 15px auto 0;
-  display: block;       /* Centra la imagen horizontalmente */
+  margin-top: 15px; /* Ajuste en el margen */
 }
-
 
 /* Botón de desplazamiento hacia arriba */
 .scroll-top {
@@ -141,28 +138,4 @@ footer {
   height: auto;     /* Mantendrá la proporción de la imagen */
   border-radius: 8px;
   margin-top: 15px;
-}
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  header h1 {
-    font-size: 1.5em;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .post img {
-    max-width: 100%;
-    margin-top: 10px;
-  }
-}
-
-/* Texto negro para sección de contacto */
-.contacto-negro {
-  color: black;
 }
