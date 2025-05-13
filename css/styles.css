@@ -91,11 +91,14 @@ nav a:hover {
 }
 
 .post img {
-  width: 100%;
+  max-width: 800px;     /* Tamaño máximo visible */
+  width: 100%;          /* Escalable según contenedor */
   height: auto;
   border-radius: 8px;
-  margin-top: 15px; /* Ajuste en el margen */
+  margin: 15px auto 0;
+  display: block;       /* Centra la imagen horizontalmente */
 }
+
 
 /* Botón de desplazamiento hacia arriba */
 .scroll-top {
@@ -154,10 +157,10 @@ footer {
   }
 
   .post img {
+    max-width: 100%;
     margin-top: 10px;
   }
 }
-
 
 /* Texto negro para sección de contacto */
 .contacto-negro {
