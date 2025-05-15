@@ -6,7 +6,7 @@
   <meta name="keywords" content="desarrollo web, HTML, CSS, blog, tecnología, programación" />
   <meta name="author" content="Hugo Herrera Monar" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Blog Personal</title>
+  <title>Mi Blog Personal | Hugo Herrera Monar</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
@@ -36,6 +36,7 @@
   </style>
 </head>
 <body>
+<main>
 
   <header>
     <h1>Bienvenidos a Mi Blog</h1>
@@ -43,10 +44,16 @@
   </header>
 
   <!-- NAVIGATION -->
-<nav class="navbar">
-  <a href="index.html">Inicio</a>
-  <a href="#acerca-de">Acerca de</a>
-  <a href="#contacto">Contacto</a>
+<nav class="navbar" role="navigation" aria-label="Menú principal">
+
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+    ☰
+  </button>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#acerca-de">Acerca de</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
 </nav>
 
   <div class="container">
@@ -56,7 +63,7 @@
       <h2><a href="entradas/entrada1.html">Mi primera entrada</a></h2>
       <p class="fecha">Publicado el 8 de mayo de 2025</p>
       <p>Hoy empiezo este blog como un proyecto personal. Aquí compartiré mis aprendizajes en desarrollo web y otras cosas que me apasionan.</p>
-      <img src="img/imagen1.jpg" alt="Primera entrada" />
+      <img loading="lazy" src="img/imagen1.jpg" alt="Primera entrada" />
     </div>
 
     <!-- Entrada 2 -->
@@ -64,7 +71,7 @@
       <h2><a href="entradas/entrada2.html">Aprendiendo HTML</a></h2>
       <p class="fecha">Publicado el 6 de mayo de 2025</p>
       <p>HTML es el lenguaje base para crear páginas web. Es muy fácil de aprender y muy útil si quieres empezar en el mundo del desarrollo.</p>
-      <img src="img/imagen2.jpg" alt="HTML en acción" />
+      <img loading="lazy" src="img/imagen2.jpg" alt="HTML en acción" />
     </div>
 
     <!-- Entrada 3 -->
@@ -72,7 +79,7 @@
       <h2><a href="entradas/entrada3.html">Una imagen vale más que mil palabras</a></h2>
       <p class="fecha">Publicado el 3 de mayo de 2025</p>
       <p>Las imágenes ayudan a que tu contenido sea más atractivo. Asegúrate de usar imágenes optimizadas y con buen contexto.</p>
-      <img src="img/imagen3.jpg" alt="Imágenes en web" />
+      <img loading="lazy" src="img/imagen3.jpg" alt="Imágenes en web" />
     </div>
 
   </div>
@@ -89,6 +96,40 @@
     <p>Si deseas ponerte en contacto conmigo, puedes escribirme al siguiente correo electrónico:</p>
     <p><strong>Hugo Herrera Monar</strong></p>
     <p><strong>Correo electrónico:</strong> <a href="mailto:hugoherreramonar@outlook.com">hugoherreramonar@outlook.com</a></p>
+
+    <section id="comentarios" class="section">
+  <h2>Deja un comentario</h2>
+  <form id="comment-form" method="POST" action="https://staticman3.herokuapp.com/v3/entry/hhmonar/mi-blog/main/comments">
+    <label for="name">Nombre:</label><br>
+    <input type="text" name="name" id="name" required><br><br>
+
+    <label for="email">Correo electrónico (opcional):</label><br>
+    <input type="email" name="email" id="email"><br><br>
+
+    <label for="message">Comentario:</label><br>
+    <textarea name="message" id="message" rows="5" required></textarea><br><br>
+
+    <!-- Campo oculto donde se agregará el token -->
+    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<!-- Script de reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LdwgTorAAAAAJQDEzinGcPVKR8nGrFeNB1QLoT8"></script>
+<script>
+  grecaptcha.ready(function () {
+    document.getElementById('comment-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      grecaptcha.execute('6LdwgTorAAAAAJQDEzinGcPVKR8nGrFeNB1QLoT8', { action: 'submit' }).then(function (token) {
+        document.getElementById('g-recaptcha-response').value = token;
+        event.target.submit();
+      });
+    });
+  });
+</script>
+
   </div>
 
   <!-- Espacio adicional para probar scroll -->
@@ -99,7 +140,7 @@
   </footer>
 
   <!-- Botón flecha hacia arriba -->
-  <div id="scroll-to-top" class="scroll-top">↑</div>
+  <div id="scroll-to-top" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">↑</div>
 
   <!-- Script para mostrar/ocultar la flecha -->
   <script>
@@ -117,6 +158,19 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
+
+</main>
+
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    navList.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>

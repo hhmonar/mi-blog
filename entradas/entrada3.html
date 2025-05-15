@@ -11,6 +11,7 @@
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 </head>
 <body>
+<main>
 
   <header>
     <h1>Una imagen vale más que mil palabras</h1>
@@ -18,10 +19,11 @@
   </header>
 
   <!-- NAVIGATION -->
-<nav class="navbar">
-  <a href="../index.html">Inicio</a>
-  <a href="../index.html#acerca-de">Acerca de</a>
-  <a href="../index.html#contacto">Contacto</a>
+<nav class="navbar" role="navigation" aria-label="Menú principal">
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <ul class="nav-list">
+    <li><a href="../index.html">Inicio</a></li>
+  </ul>
 </nav>
 
   <div class="container">
@@ -32,13 +34,26 @@
 
       <p>En este blog, procuraré utilizar imágenes de calidad que complementen el contenido textual de manera efectiva. Cada fotografía o gráfico estará relacionado directamente con el tema abordado, y se presentará en un formato que garantice tanto una buena estética como un rendimiento técnico adecuado.</p>
 
-      <img src="../img/imagen3.jpg" alt="Imágenes en web" />
+      <img loading="lazy" src="../img/imagen3.webp" alt="Imágenes en web" />
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 Mi Blog Personal. Todos los derechos reservados.</p>
   </footer>
+
+</main>
+
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    navList.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
